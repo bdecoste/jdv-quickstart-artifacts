@@ -10,4 +10,4 @@ USER root
 RUN mkdir /tmp/jdv-quickstart-artifacts
 
 COPY jdv-quickstart-artifacts /tmp/jdv-quickstart-artifacts
-
+COPY jdv-quickstart-modules /tmp/jdv-quickstart-modules
