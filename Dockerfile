@@ -1,4 +1,4 @@
-FROM rhel7:latest
+FROM scratch
 
 LABEL Name="jboss-jdv-6/quickstart-artifacts" \
       Version="latest" \
@@ -7,7 +7,6 @@ LABEL Name="jboss-jdv-6/quickstart-artifacts" \
 
 USER root
 
-RUN mkdir /tmp/jdv-quickstart-artifacts
-
-COPY jdv-quickstart-artifacts /tmp/jdv-quickstart-artifacts
-COPY jdv-quickstart-modules /tmp/jdv-quickstart-modules
+COPY injected-files /tmp/injected-files
+COPY injected-modules /tmp/injected-modules
+COPY injected-resource-adapters /tmp/injected-resource-adapters
